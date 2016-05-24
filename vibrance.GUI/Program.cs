@@ -37,6 +37,10 @@ namespace vibrance.GUI
             {
                 vibranceGUI = new NvidiaVibranceGUI();
             }
+            else if (adapter == GraphicsAdapter.INTEL)
+            {
+                vibranceGUI = new IntelVibranceGUI();
+            }
             else if (adapter == GraphicsAdapter.UNKNOWN)
             {
                 string errorMessage = new Win32Exception(Marshal.GetLastWin32Error()).Message;
